@@ -1,0 +1,385 @@
+/* ==========================================================================
+   Discount Donny — design tokens
+   ========================================================================== */
+:root {
+  --ink: #16213E;
+  --ink-soft: #4A5578;
+  --paper: #F7F5EF;
+  --paper-raised: #FFFFFF;
+  --line: #DDD8CC;
+  --deal-red: #D6473F;
+  --deal-red-dark: #B93A33;
+  --stamp-gold: #C98A1F;
+  --sage: #3F7A5C;
+  --shadow: 0 1px 2px rgba(22, 33, 62, 0.06), 0 4px 12px rgba(22, 33, 62, 0.05);
+
+  --font-display: "Archivo Black", "Arial Black", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+img { max-width: 100%; display: block; }
+
+:focus-visible {
+  outline: 3px solid var(--sage);
+  outline-offset: 2px;
+}
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0 14px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 4vw, 30px);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.logo span {
+  color: var(--deal-red);
+}
+
+.ticker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: var(--paper-raised);
+}
+
+.ticker strong {
+  color: var(--deal-red);
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  padding: 48px 0 28px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.02;
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.hero h1 .accent {
+  color: var(--deal-red);
+}
+
+.hero p {
+  max-width: 560px;
+  color: var(--ink-soft);
+  font-size: 17px;
+  margin: 0 0 22px;
+}
+
+.hero-search {
+  display: flex;
+  gap: 10px;
+  max-width: 480px;
+  flex-wrap: wrap;
+}
+
+.hero-search input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 16px;
+  font-size: 15px;
+  font-family: var(--font-body);
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: var(--paper-raised);
+}
+
+.hero-search button {
+  padding: 12px 20px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: var(--ink);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-search button:hover { background: var(--deal-red); border-color: var(--deal-red); }
+
+/* ==========================================================================
+   Category filters
+   ========================================================================== */
+.filters {
+  padding: 22px 0 6px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 8px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.filter-btn:hover { background: var(--ink); color: var(--paper); }
+
+.filter-btn.active {
+  background: var(--deal-red);
+  border-color: var(--deal-red);
+  color: #fff;
+}
+
+/* ==========================================================================
+   Deal grid + tag cards
+   ========================================================================== */
+.deals-section { padding: 28px 0 60px; }
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+  padding-top: 10px;
+}
+
+.deal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.deal-card {
+  position: relative;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 4px 12px 12px 4px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.deal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(22, 33, 62, 0.12);
+}
+
+/* the punch-hole, like a real price tag */
+.deal-card::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.deal-card-top {
+  padding: 18px 18px 12px 26px;
+  border-bottom: 1px dashed var(--line);
+}
+
+.deal-store {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+
+.deal-title {
+  font-size: 16.5px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.deal-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-mono);
+}
+
+.deal-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sage);
+}
+
+.deal-was {
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-decoration: line-through;
+}
+
+.deal-card-bottom {
+  padding: 12px 18px 18px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.deal-desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0;
+  flex: 1;
+}
+
+.deal-cta {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  color: var(--deal-red-dark);
+}
+
+.deal-cta::after { content: " →"; }
+
+.discount-badge {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: var(--deal-red);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transform: rotate(3deg);
+  box-shadow: 0 2px 6px rgba(214, 71, 63, 0.35);
+}
+
+/* Rubber-stamp badge for featured picks */
+.stamp {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 2px solid var(--stamp-gold);
+  color: var(--stamp-gold);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  border-radius: 3px;
+  transform: rotate(-6deg);
+  opacity: 0.85;
+  background: rgba(201, 138, 31, 0.06);
+}
+
+.empty-state {
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.disclosure {
+  max-width: 640px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 520px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .deal-grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deal-card, .filter-btn { transition: none; }
+}

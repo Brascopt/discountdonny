@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Donny — Deals worth your time</title>
+<meta name="description" content="Hand-picked deals, discounts, and freebies from Donny. Updated daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="/" class="logo">Discount<span>Donny</span></a>
+    <div class="ticker" id="ticker">Loading deals…</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Real deals.<br>No <span class="accent">nonsense</span>.</h1>
+    <p>I dig through the sales, coupon codes, and clearance racks so you don't have to. Everything here is something I'd actually buy.</p>
+    <form class="hero-search" id="search-form" role="search">
+      <input type="text" id="search-input" placeholder="Search deals, brands, or stores…" aria-label="Search deals">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</section>
+
+<div class="wrap">
+  <nav class="filters" id="filters" aria-label="Filter by category">
+    <!-- filter buttons injected by script.js -->
+  </nav>
+</div>
+
+<section class="deals-section">
+  <div class="wrap">
+    <p class="section-label" id="results-label">Today's deals</p>
+    <div class="deal-grid" id="deal-grid">
+      <!-- deal cards injected by script.js -->
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="disclosure">Discount Donny is reader-supported. Some links on this site are affiliate links, which means I may earn a commission if you make a purchase — at no extra cost to you. I only share deals I think are genuinely worth it.</p>
+    <p>&copy; <span id="year"></span> Discount Donny</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "1",
+    "title": "Anker 20,000mAh Portable Charger",
+    "store": "Amazon",
+    "category": "Electronics",
+    "price": "$24.99",
+    "wasPrice": "$45.99",
+    "discount": "46% off",
+    "description": "Fast-charging power bank with two USB ports. Great gift or travel backup.",
+    "link": "https://www.amazon.com/",
+    "featured": true,
+    "dateAdded": "2026-08-01"
+  },
+  {
+    "id": "2",
+    "title": "Le Creuset Dutch Oven, 5.5-Qt",
+    "store": "Williams Sonoma",
+    "category": "Home",
+    "price": "$189.99",
+    "wasPrice": "$380.00",
+    "discount": "50% off",
+    "description": "Rare markdown on the classic enameled cast-iron pot. Several colors in stock.",
+    "link": "https://www.williams-sonoma.com/",
+    "featured": true,
+    "dateAdded": "2026-08-01"
+  },
+  {
+    "id": "3",
+    "title": "Free Sample: Full-Size Sunscreen",
+    "store": "Ulta",
+    "category": "Free Stuff",
+    "price": "Free",
+    "wasPrice": "",
+    "discount": "100% off",
+    "description": "No purchase necessary — free sample with any online order while supplies last.",
+    "link": "https://www.ulta.com/",
+    "featured": false,
+    "dateAdded": "2026-07-30"
+  },
+  {
+    "id": "4",
+    "title": "Men's Merino Wool Sweater",
+    "store": "Nordstrom Rack",
+    "category": "Fashion",
+    "price": "$39.97",
+    "wasPrice": "$110.00",
+    "discount": "64% off",
+    "description": "Soft merino crew neck, machine washable. Limited sizes.",
+    "link": "https://www.nordstromrack.com/",
+    "featured": false,
+    "dateAdded": "2026-07-29"
+  },
+  {
+    "id": "5",
+    "title": "4-Night Cancun All-Inclusive",
+    "store": "Expedia",
+    "category": "Travel",
+    "price": "$489/person",
+    "wasPrice": "$720/person",
+    "discount": "32% off",
+    "description": "Beachfront resort, flights included from select cities. Book by Friday.",
+    "link": "https://www.expedia.com/",
+    "featured": true,
+    "dateAdded": "2026-07-28"
+  },
+  {
+    "id": "6",
+    "title": "Instant Pot Duo 6-Qt",
+    "store": "Target",
+    "category": "Home",
+    "price": "$49.00",
+    "wasPrice": "$99.00",
+    "discount": "51% off",
+    "description": "7-in-1 pressure cooker. Back at its lowest price this year.",
+    "link": "https://www.target.com/",
+    "featured": false,
+    "dateAdded": "2026-07-27"
+  }
+]
